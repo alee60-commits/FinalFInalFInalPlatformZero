@@ -1,0 +1,157 @@
+title: PlatformZero_Setup
+---
+<<declare $pz_quest_started = false>>
+<<declare $pz_has_notebook = false>>
+<<declare $pz_notebook_returned = false>>
+<<declare $pz_story_complete = false>>
+<<declare $pz_ended = false>>
+===
+
+title: Nina
+---
+<<if $pz_story_complete>>
+    <<jump Nina_done>>
+<<elseif $pz_notebook_returned>>
+    <<jump Nina_reveal>>
+<<elseif $pz_has_notebook>>
+    <<jump Nina_quest_completed>>
+<<elseif $pz_quest_started>>
+    <<jump Nina_quest_started>>
+<<else>>
+    <<jump Nina_begin>>
+<<endif>>
+===
+
+title: Nina_begin
+---
+Nina: Front pocket, main compartment, bench. I've checked all three. Repeating the same procedure isn't going to...
+Nina: Unless I missed the lining. Shit. Start again.
+Player: What're we looking for?
+Nina: A red notebook. I put it beside me before checking the timetable. Objects don't relocate themselves, so clearly I've missed something.
+Player: Mmmmmmmmm. Red one.
+Nina: Check the far benches. Underneath, not just around them. And don't open it. There's a loose sheet inside.
+Player: Evan's thing?
+Nina: His chemistry notes, yes. I rewrote them because mine had annotations. It would have been confusing.
+Player: Awwwww. You made him a nice copy.
+Nina: A legible copy. That's a fairly basic courtesy.
+Player: Little headings and everything.
+Nina: Could you look for it, please?
+<<set $pz_quest_started = true>>
+===
+
+title: Nina_quest_started
+---
+Nina: Did you check the gap beneath the backrest? You need to bend down. Looking at the bench from standing height accomplishes very little.
+Player: Was getting there.
+Nina: You were looking at the vending machine.
+Player: It's got soup.
+Nina: Please.
+===
+
+title: Notebook
+---
+<<if $pz_notebook_returned or $pz_has_notebook>>
+    <<stop>>
+<<elseif not $pz_quest_started>>
+    Player: Huh. Better ask her.
+<<else>>
+    Player: There you are.
+    <<set $pz_has_notebook = true>>
+<<endif>>
+===
+
+title: Nina_quest_completed
+---
+Nina: Thank God. Wait, the elastic's loose. Did the separate sheet fall out? It should be folded once, writing facing inward.
+Player: Still there.
+<<set $pz_has_notebook = false>>
+<<set $pz_notebook_returned = true>>
+Nina: Right. Good. Except now the corner's bent. I can't give him that.
+Player: Think he's gonna grade it?
+Nina: No. We're studying together on Thursday. I'd simply prefer not to arrive with something crumpled.
+Player: Mmmmmmmmmmmmm. Studying.
+Nina: We are. His friends can't come, so it'll just be the two of us. That's hardly my fault.
+Player:  Oh no.
+Nina: What?
+Player: All alone. With your diagrams.
+Nina: You make it sound disgusting.
+Player: Chemistry.
+<<jump Nina_reveal>>
+===
+
+title: Nina_reveal
+---
+Nina: I've lost forty minutes. My report's unfinished, the group slides are incorrect, and now this needs rewriting. I had a perfectly workable schedule.
+Player: Keep the sheet. It's fine.
+Nina: It isn't fine. You can see the crease.
+Player: Yeah. I see it.
+Nina: Then why would you...
+Player: Still says chemistry.
+Nina: Do you approach your university assignments like this?
+Player: When I open them.
+Nina: God. I couldn't. I'd lie awake thinking about everything I'd done incorrectly.
+Player: Right, three in the morning. Redoing the title.
+Nina: Well, if the title's wrong.
+Player: Mm.
+Nina: I need to leave. Where do those stairs go?
+Player: Back here.
+Nina: That's impossible. Did you try the other side? There must be a different entrance or a staff passage. Someone needs to actually check.
+Player: Probably.
+Nina: Stop agreeing with me and help.
+-> "Yeah. Okay."
+    Player: Yeah. Okay.
+    Nina: Thank you. Start with the door. I'll check whether there's an emergency number.
+    Player: By the way, I just agreed with you again. :3 
+-> "Here. Give me the bag."
+    Player: Here. Give me the bag.
+    Nina: Why?
+    Player: You've opened it like six times.
+    Nina: ...Don't put it on the floor.
+Nina: I did everything early today. Everything. I don't understand what I'm supposed to correct.
+Player: Dunno. I think we're just stuck.
+<<set $pz_story_complete = true>>
+===
+
+title: Nina_done
+---
+Nina: Phone, notebook, keys. That's everything. I know that's everything.
+Player: Little pocket's zipped.
+Nina: Right. Let's go before I check again.
+===
+
+title: StationMap
+---
+Player: Huh.
+Player: That's a lot of lines going nowhere.
+===
+
+title: StationExit
+---
+<<if not $pz_story_complete>>
+    Player: Nope. Locked.
+<<else>>
+    Nina: It's open. Are you coming?
+    Player: Yeah. Sorry. That light's been buzzing this whole time.
+    Nina: ...Can I ask you something?
+    Player: Mm?
+    Nina: Do we get into our first choice?
+    Player: Second.
+    Nina: Oh.
+    Player: There's a place near campus. Does these huge fries.
+    Player: Second.
+    Nina: Oh.
+    Player: There's a place near campus. Huge fries.
+    Nina: That's not really an equivalent outcome.
+    Player: They put hamburger patties on them.
+    Nina: I heard you.
+    Nina: ...Do we like it there?
+    Player: Yeah. Mostly.
+    Nina: Okay. That's... okay.
+    Player: Coming?
+    Nina: Yes. And I'm keeping the sheet. He can read around the crease.
+    Player: Alright, girl.
+    Nina: Don't make it weird.
+    Player: Wouldn't dream of it.
+    <<set $pz_ended = true>>
+<<endif>>
+===

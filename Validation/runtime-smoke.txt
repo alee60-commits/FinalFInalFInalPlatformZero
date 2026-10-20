@@ -1,0 +1,57 @@
+PASS
+2026-10-15T17:38:03.9104005Z
+Unity 6000.5.10f1
+Checks: 53
+PASS: Runtime references and font
+PASS: Initial quest objects exist
+PASS: Fresh quest state
+PASS: Pause prevents exploration
+PASS: Resume restores exploration
+PASS: Interaction reachable: Nina (hit Nina, target (2.00, 1.10, 1.40))
+PASS: Interaction reachable: Red Notebook (hit Red Notebook, target (3.50, 0.73, 9.30))
+PASS: Interaction reachable: Exit Intercom (hit Exit Intercom, target (1.90, 1.35, -15.20))
+PASS: Dialogue completes: Notebook / choice 0
+PASS: Cannot collect before quest
+PASS: Dialogue completes: StationExit / choice 0
+PASS: Cannot exit early
+PASS: Dialogue completes: Nina / choice 0
+PASS: Introduction starts quest
+PASS: Dialogue completes: Nina / choice 0
+PASS: Reminder preserves quest
+PASS: Dialogue completes: Notebook / choice 0
+PASS: Pickup updates Yarn and hides notebook
+PASS: Dialogue completes: Nina / choice 0
+PASS: Return consumes notebook
+PASS: Reveal unlocks exit
+PASS: Dialogue completes: Nina / choice 0
+PASS: Repeat conversation preserves completion
+PASS: Dialogue completes: StationExit / choice 0
+PASS: Ending stops exploration
+PASS: Ending screen displayed
+PASS: Runtime references and font
+PASS: Initial quest objects exist
+PASS: Fresh quest state
+PASS: Pause prevents exploration
+PASS: Resume restores exploration
+PASS: Interaction reachable: Nina (hit Nina, target (2.00, 1.10, 1.40))
+PASS: Interaction reachable: Red Notebook (hit Red Notebook, target (3.50, 0.73, 9.30))
+PASS: Interaction reachable: Exit Intercom (hit Exit Intercom, target (1.90, 1.35, -15.20))
+PASS: Dialogue completes: Notebook / choice 1
+PASS: Cannot collect before quest
+PASS: Dialogue completes: StationExit / choice 1
+PASS: Cannot exit early
+PASS: Dialogue completes: Nina / choice 1
+PASS: Introduction starts quest
+PASS: Dialogue completes: Nina / choice 1
+PASS: Reminder preserves quest
+PASS: Dialogue completes: Notebook / choice 1
+PASS: Pickup updates Yarn and hides notebook
+PASS: Dialogue completes: Nina / choice 1
+PASS: Return consumes notebook
+PASS: Reveal unlocks exit
+PASS: Dialogue completes: Nina / choice 1
+PASS: Repeat conversation preserves completion
+PASS: Dialogue completes: StationExit / choice 1
+PASS: Ending stops exploration
+PASS: Ending screen displayed
+PASS: Restart resets Yarn variables
